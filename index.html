@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Erudite Academy · UTME Physics CBT · Moments, Torque &amp; Equilibrium</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Montserrat:wght@700;800&family=Figtree:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{--hd:"Sora","Trebuchet MS",system-ui,sans-serif;--bd:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--bg:#fff9ea;--tx:#24160f;--mu:#7a6a5f;--ln:#eddcc0;--y:#ffc20e;--r:#c81d1d;--ok:#16905a;--am:#e8a100;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 *{box-sizing:border-box}[hidden]{display:none!important}
@@ -81,6 +81,42 @@ svg text{fill:#000;font:600 12px var(--bd)}
 .mu{color:var(--mu)}
 .lk{display:block;margin:14px auto 0;background:none;border:0;color:var(--r);font:700 13px var(--bd);text-decoration:underline;cursor:pointer}
 .rr.me{border-color:var(--r);background:#fff5f5}.rk{display:inline-block;min-width:30px;font-style:normal;font-weight:800}
+body.fs #app{max-width:none;padding:0}
+@keyframes sp{to{transform:rotate(360deg)}}@keyframes fi{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.splash{min-height:100vh;display:grid;place-items:center;background:linear-gradient(160deg,#fff,#fff6d6)}
+.spin{width:88px;height:88px;position:relative;display:grid;place-items:center}
+.spin:before{content:"";position:absolute;inset:0;border-radius:50%;border:5px solid #ffeaa6;border-top-color:#f5a300;animation:sp .9s linear infinite}
+.spin b{font:800 40px Figtree,Montserrat,sans-serif;color:#f5a300}
+.lw{max-width:520px;margin:0 auto;padding:0 22px}
+.lh{display:flex;align-items:center;gap:10px}
+.lg{width:40px;height:40px;border-radius:50%;background:#fff;color:#c47f00;display:grid;place-items:center;font:800 22px Figtree,Montserrat,sans-serif;box-shadow:0 2px 8px #0002}
+.lh b{flex:1;font:800 17px Figtree,Montserrat,sans-serif}
+.pill{border:1.5px solid #2b1a0066;background:transparent;color:#2b1a00;border-radius:999px;padding:9px 18px;font:700 14px Figtree,Montserrat,sans-serif}
+.lhero{background:linear-gradient(135deg,#ffd84d 0%,#ffbe0b 55%,#f59e0b 100%);color:#2b1a00;padding:22px 0 58px;position:relative;overflow:hidden}
+.lhero:before,.lhero:after{content:"";position:absolute;border-radius:50%;border:1px solid #fff8}
+.lhero:before{width:430px;height:430px;right:-180px;top:-100px}.lhero:after{width:300px;height:300px;right:-70px;top:150px}
+.lhero .lw{position:relative;z-index:1}
+.lhero h1{font:800 38px/1.12 Figtree,Montserrat,sans-serif;margin:46px 0 14px;letter-spacing:-.5px}
+.lhero p{font:500 16px/1.55 Figtree,Montserrat,sans-serif;max-width:380px;margin:0 0 28px;color:#4a3300}
+.lbt{display:flex;gap:12px}
+.wb,.ob{flex:1;border-radius:14px;padding:16px 6px;font:800 14px Figtree,Montserrat,sans-serif;border:0;color:#2b1a00}
+.wb{background:#fff;box-shadow:0 6px 18px #7a4a0033}.ob{background:#ffffff40;border:1.5px solid #fff}
+.why{background:#fff;padding:34px 0 40px}.why h2{font:800 24px Figtree,Montserrat,sans-serif;margin:0 0 14px;color:#2b1a00}
+.wi{display:flex;gap:14px;align-items:center;padding:15px 0;border-bottom:1px solid #f3e8c9}.wi:last-child{border:0}
+.wi i{flex:none;width:48px;height:48px;border-radius:13px;background:#fff1bd;display:grid;place-items:center}
+.wi b{display:block;font:800 16px Figtree,Montserrat,sans-serif;color:#2b1a00}.wi span{color:#7a6a5f;font:500 14px/1.4 Figtree,Montserrat,sans-serif}
+.lf{background:linear-gradient(135deg,#ffc20e,#f59e0b);color:#2b1a00;padding:32px 0 36px}
+.lf p{font:500 15px/1.5 Figtree,Montserrat,sans-serif;margin:16px 0 22px}.lf .ob{background:transparent;border-color:#2b1a00}
+.wa{display:block;text-align:center;margin-top:20px;font:700 14px Figtree,Montserrat,sans-serif;color:#2b1a00}
+.wel{min-height:100vh;display:grid;place-content:center;text-align:center;padding:24px;background:radial-gradient(circle at 88% 6%,#ffe69a 0,#fff 55%),#fff;animation:fi .6s ease both}
+.wel small{letter-spacing:.32em;color:#8a7a6a;font:700 12px Figtree,Montserrat,sans-serif}
+.wel h1{font:800 34px/1.15 Figtree,Montserrat,sans-serif;margin:16px 0 12px;color:#2b1a00}
+.wel h1 em{font-style:normal;background:linear-gradient(90deg,#ffb703,#f97316);-webkit-background-clip:text;background-clip:text;color:transparent}
+.wel p{color:#7a6a5f;font:600 15px Figtree,Montserrat,sans-serif;margin:0}
+.gate textarea{width:100%;box-sizing:border-box;padding:12px;border:2px solid var(--ln);border-radius:10px;font:600 15px var(--bd);min-height:110px;margin-bottom:6px;resize:vertical}
+.mg{background:#fff;border:1px solid var(--ln);border-radius:12px;padding:10px 12px;margin:0 0 8px;font-size:13px}.mg small{color:var(--mu)}
+.bdg{display:inline-block;background:#fff1bd;border-radius:6px;padding:1px 7px;font:700 10px var(--hd);margin-right:6px;text-transform:uppercase}
+.x{flex:none;border:1px solid var(--r);background:#fff;color:var(--r);border-radius:8px;padding:5px 9px;font:700 11px var(--hd);margin-left:8px}
 </style></head>
 <body>
 <div id="app"></div>
@@ -137,7 +173,7 @@ const Q=[
 Q.forEach(q=>{if(q.n||q.o.every(s=>/^\d/.test(s)))return;const c=q.o[q.a];q.o=q.o.map(t=>[Math.random(),t]).sort((a,b)=>a[0]-b[0]).map(z=>z[1]);q.a=q.o.indexOf(c)});
 const N=Q.length,$=s=>document.querySelector(s),fmt=s=>Math.floor(s/60)+":"+String(s%60).padStart(2,"0");
 const CI='<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M8 6h8M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15h.01M8 19h.01M12 19h.01M16 19h.01"/></svg>';
-let v="load",i=0,ci=0,A=Array(N).fill(null),left=1800,tmr,armed=0;
+let v="splash",i=0,ci=0,A=Array(N).fill(null),left=1800,tmr,armed=0;
 function opts(x,k,rv){return x.o.map((t,j)=>{let c="opt",g="";if(rv){if(j==x.a){c+=" ok";g="<small>CORRECT ANSWER</small>"}else if(A[k]===j){c+=" bad";g="<small>YOUR ANSWER</small>"}}else if(A[k]===j)c+=" on";return `<button class="${c}" ${rv?"disabled":`data-a="opt" data-j="${j}"`}><em>${"ABCD"[j]}</em><span>${t}${g?`<small>${g}</small>`:""}</span></button>`}).join("")}
 const qcard=(k,rv)=>{const x=Q[k];return `<div class="card"><div class="ql">QUESTION ${k+1}</div><p class="q">${x.q}</p>${x.d?`<div class="dg">${x.d}</div>`:""}${opts(x,k,rv)}</div>`};
 const HC=["298b0t0uete","17jmz9yxpb6","1ckuqis3woo","6gv13kfo66","13vzbc7sqyt"],HF=s=>{let a=3735928559,b=1103547991;for(let i=0,c;i<s.length;i++){c=s.charCodeAt(i);a=Math.imul(a^c,2654435761);b=Math.imul(b^c,1597334677)}a=Math.imul(a^a>>>16,2246822507)^Math.imul(b^b>>>13,3266489909);b=Math.imul(b^b>>>16,2246822507)^Math.imul(a^a>>>13,3266489909);return(4294967296*(2097151&b)+(a>>>0)).toString(36)},UK="ea_moments_ok";
@@ -155,13 +191,13 @@ let me=null,hist=[],mode="in";
 const QZ=[{id:"moments",t:"Moments, Torque & Equilibrium",s:"UTME Physics · 30 questions · 30 minutes"}];
 const esc=t=>String(t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const load=()=>'<p class="mu" style="text-align:center;margin:50px 0">Loading…</p>';
-const auth=()=>{const up=mode=="up";return `<div class="hero"><div class="chips"><span>Student Portal</span></div><h1>${up?"Create your account":"Welcome back"}</h1><p>${up?"Sign up with the access code from Erudite Academy.":"Log in to open your quizzes."}</p></div><div class="card gate">${up?'<input class="tx" id="nm" placeholder="Full name" autocomplete="name">':""}<input class="tx" id="em" type="email" placeholder="Email" autocomplete="email" autocapitalize="off" spellcheck="false"><input class="tx" id="pw" type="password" placeholder="Password (6+ characters)" autocomplete="${up?"new-password":"current-password"}">${up?'<input id="ac" placeholder="ACCESS CODE" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="16">':""}<div id="ae" class="er"></div><button class="go" id="ab" data-a="auth">${up?"Create account":"Log in"}</button><button class="lk" data-a="mode">${up?"I already have an account":"New here? Create an account"}</button></div>`};
-const home=()=>{const n=esc(((me.user_metadata&&me.user_metadata.name)||"Student").split(" ")[0]);return `<div class="hero"><div class="chips"><span>Student Portal</span></div><h1>Hi, ${n} 👋</h1><p>Pick a quiz to practise.</p></div><h3>Quizzes</h3>${QZ.map(q=>`<button class="qc" data-a="open" data-q="${q.id}"><b>${q.t}</b><small>${q.s}</small><i>›</i></button>`).join("")}<h3>Your recent results</h3>${hist.length?hist.map(r=>{const z=QZ.find(q=>q.id==r.quiz);return `<div class="rr"><span>${esc(z?z.t:r.quiz)}<small>${new Date(r.created_at).toLocaleDateString()}</small></span><b>${r.points}/400</b></div>`}).join(""):'<p class="mu">No results yet. Take your first quiz!</p>'}<button class="go" data-a="lb">🏆 Leaderboard</button><button class="go alt" data-a="out">Log out</button>`};
+const auth=()=>{const up=mode=="up";return `<button class="sm hm" data-a="land">← Back</button><div class="hero"><div class="chips"><span>${teacher?"Teacher Portal":"Student Portal"}</span></div><h1>${up?"Create your account":teacher?"Teacher login":"Welcome back"}</h1><p>${up?"Sign up with the access code from Erudite Academy.":"Log in to open your quizzes."}</p></div><div class="card gate">${up?'<input class="tx" id="nm" placeholder="Full name" autocomplete="name">':""}<input class="tx" id="em" type="email" placeholder="Email" autocomplete="email" autocapitalize="off" spellcheck="false"><input class="tx" id="pw" type="password" placeholder="Password (6+ characters)" autocomplete="${up?"new-password":"current-password"}">${up?'<input id="ac" placeholder="ACCESS CODE" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="16">':""}<div id="ae" class="er"></div><button class="go" id="ab" data-a="auth">${up?"Create account":"Log in"}</button>${teacher?"":`<button class="lk" data-a="mode">${up?"I already have an account":"New here? Create an account"}</button>`}</div>`};
+const home=()=>{const n=esc(((me.user_metadata&&me.user_metadata.name)||"Student").split(" ")[0]);return `<div class="hero"><div class="chips"><span>Student Portal</span></div><h1>Hi, ${n} 👋</h1><p>Pick a quiz to practise.</p></div><h3>Quizzes</h3>${QZ.map(q=>`<button class="qc" data-a="open" data-q="${q.id}"><b>${q.t}</b><small>${q.s}</small><i>›</i></button>`).join("")}<h3>Your recent results</h3>${hist.length?hist.map(r=>{const z=QZ.find(q=>q.id==r.quiz);return `<div class="rr"><span>${esc(z?z.t:r.quiz)}<small>${new Date(r.created_at).toLocaleDateString()}</small></span><b>${r.points}/400</b></div>`}).join(""):'<p class="mu">No results yet. Take your first quiz!</p>'}<button class="go" data-a="lb">🏆 Leaderboard</button>${isAdmin?'<button class="go alt" data-a="admin">🛠 Teacher board</button>':""}<button class="go alt" data-a="out">Log out</button><div style="text-align:center"><button class="lk" data-a="msg" data-k="contact" style="display:inline-block;margin:10px 12px">Contact us</button><button class="lk" data-a="msg" data-k="complaint" style="display:inline-block;margin:10px 12px">Complaint</button></div>`};
 let lbq="moments",lbrows=[],lbErr=false;
 async function loadLb(){try{const{data,error}=await sb.rpc("leaderboard",{q:lbq});lbErr=!!error;lbrows=data||[]}catch(_){lbErr=true;lbrows=[]}}
 const lb=()=>{const z=QZ.find(q=>q.id==lbq);return `<button class="sm hm" data-a="home">← Home</button><div class="hero"><div class="chips"><span>Leaderboard</span></div><h1>🏆 Top students</h1><p>${esc(z.t)}</p></div>${lbErr?'<p class="mu">Could not load the leaderboard. Check your internet and try again.</p>':lbrows.length?lbrows.map(r=>`<div class="rr${r.me?" me":""}"><span><em class="rk">${r.rank<=3?["🥇","🥈","🥉"][r.rank-1]:r.rank}</em>${esc(r.name)}${r.me?" (You)":""}${r.seconds!=null?`<small>⏱ ${fmt(r.seconds)}</small>`:""}</span><b>${r.points}/400</b></div>`).join(""):'<p class="mu">No scores yet. Be the first!</p>'}<p class="mu" style="font-size:12px;margin-top:10px">Best score of each student. If scores tie, the faster time ranks higher.</p>`};
 async function loadHist(){try{const{data}=await sb.from("results").select("quiz,score,total,points,created_at").order("created_at",{ascending:false}).limit(5);hist=data||[]}catch(_){hist=[]}}
-async function enter(){const{data}=await sb.auth.getSession(),u=data&&data.session&&data.session.user;if(!u){v="auth";draw();return}me=u;await loadHist();v="home";draw()}
+async function enter(){const{data}=await sb.auth.getSession(),u=data&&data.session&&data.session.user;if(!u){v="land";draw();return}me=u;await after(mode=="up"?0:1)}
 async function doAuth(){const g=d=>($(d)?$(d).value:"").trim(),E=m=>{$("#ae").textContent=m;$("#ab").disabled=false},em=g("#em"),pw=$("#pw").value;
 if(!sb)return E("Cannot connect. Check your internet and refresh the page.");
 if(!em||!pw)return E("Enter your email and password.");
@@ -176,25 +212,55 @@ if(!data.session)return E("Account created, but email confirmation is still ON i
 else{const{error}=await sb.auth.signInWithPassword({email:em,password:pw});
 if(error)return E(/invalid/i.test(error.message)?"Wrong email or password.":error.message)}
 await enter()}
-function draw(){$("#app").innerHTML='<div class="bh"><span>ERUDITE</span> ACADEMY</div>'+({load,auth,home,lb,intro,exam,res,cor})[v]()+'<div class="ft">ERUDITE ACADEMY</div>';if(v!="exam")$("#calc").hidden=true;scrollTo(0,0)}
+const WA="https://whatsapp.com/channel/0029VbDTdxCHbFVGOvntCa0b";
+let teacher=false,isAdmin=false,adm=null,msgK="contact",msgDone=false,wb=1;
+const IC={ck:'<path d="M5 12.5l4.5 4.5L19 7.5"/>',tm:'<circle cx="12" cy="13" r="7"/><path d="M12 9.5V13l2.5 1.5M9.5 3h5"/>',bar:'<path d="M6 20V11M12 20V5M18 20v-7"/>'};
+const ico=k=>`<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b87400" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">${IC[k]}</svg>`;
+const splash=()=>'<div class="splash"><div class="spin"><b>E</b></div></div>';
+const land=()=>`<header class="lhero"><div class="lw"><div class="lh"><span class="lg">E</span><b>Erudite Academy</b><button class="pill" data-a="login">Log in</button></div><h1>Practise like it’s exam day.</h1><p>Take timed JAMB-style mocks, see every answer explained straight away, and climb the leaderboard.</p><div class="lbt"><button class="wb" data-a="signup">Create free account</button><button class="ob" data-a="teacher">Teacher portal</button></div></div></header><section class="why"><div class="lw"><h2>Why Erudite Academy</h2>${[["ck","Instant corrections","See every answer explained the moment you submit."],["tm","Real exam conditions","Timed mocks that feel like the real paper."],["bar","Live leaderboards","Compare your score with everyone who took the same quiz."]].map(([i,t,d])=>`<div class="wi"><i>${ico(i)}</i><div><b>${t}</b><span>${d}</span></div></div>`).join("")}</div></section><footer class="lf"><div class="lw"><div class="lh"><span class="lg">E</span><b>Erudite Academy</b></div><p>Mock exams, quizzes and corrections for students who want to pass with confidence.</p><div class="lbt"><button class="wb" data-a="msg" data-k="contact">Contact us</button><button class="ob" data-a="msg" data-k="complaint">Complaint</button></div>${WA?`<a class="wa" href="${WA}" target="_blank" rel="noopener">Join our WhatsApp channel</a>`:""}</div></footer>`;
+const welcome=()=>{const n=esc(((me.user_metadata&&me.user_metadata.name)||"Student").split(" ")[0]);return `<div class="wel"><small>ERUDITE ACADEMY</small><h1>Welcome${wb?` <em>back, ${n}</em>`:`, <em>${n}</em>`}</h1><p>Let’s get practising.</p></div>`};
+const msg=()=>{const c=msgK=="contact";return `<button class="sm hm" data-a="mback">← Back</button><div class="hero"><div class="chips"><span>${c?"Contact us":"Complaint"}</span></div><h1>${c?"We’d love to hear from you":"Tell us what went wrong"}</h1><p>${c?"Send a message and we will reply.":"We read every complaint."}</p></div>${msgDone?'<div class="card gate"><p class="q">✅ Thank you. Your message has been sent.</p></div>':`<div class="card gate"><input class="tx" id="mn" placeholder="Your name" maxlength="80" value="${me?esc((me.user_metadata&&me.user_metadata.name)||""):""}"><input class="tx" id="mc" placeholder="Phone or email (so we can reply)" maxlength="120"><textarea id="mb" placeholder="Your message" maxlength="1000"></textarea><div id="ae" class="er"></div><button class="go" id="ab" data-a="send">Send</button></div>`}`};
+async function send(){const g=d=>$(d).value.trim(),t=g("#mb");if(t.length<5){$("#ae").textContent="Please write a little more.";return}$("#ab").disabled=true;let ok=false;try{const r=await sb.from("messages").insert({kind:msgK,name:g("#mn"),contact:g("#mc"),body:t});ok=!r.error}catch(_){}if(ok){msgDone=true;draw()}else{$("#ab").disabled=false;$("#ae").textContent="Could not send. Check your internet and try again."}}
+const fD=t=>t?new Date(t).toLocaleDateString():"—";
+async function chkAdmin(){try{const r=await sb.rpc("is_admin");isAdmin=r.data===true}catch(_){isAdmin=false}}
+async function loadAdmin(){const[a,b,c]=await Promise.all([sb.rpc("admin_students"),sb.rpc("admin_stats"),sb.rpc("admin_messages")]);adm={s:a.data||[],t:b.data||[],m:c.data||[],err:a.error||b.error||c.error}}
+const admin=()=>{const A=adm||{s:[],t:[],m:[]};return `<button class="sm hm" data-a="home">← Home</button><div class="hero"><div class="chips"><span>Teacher portal</span></div><h1>Teacher board</h1><p>${A.s.length} students · ${A.t.reduce((n,x)=>n+x.attempts,0)} attempts</p></div>${A.err?'<p class="mu">Could not load. Did you run the Teacher setup text in Supabase?</p>':""}<h3>Quizzes</h3>${A.t.length?A.t.map(x=>`<div class="rr"><span>${esc((QZ.find(q=>q.id==x.quiz)||{t:x.quiz}).t)}<small>${x.students} students · ${x.attempts} attempts</small></span><b>avg ${x.avg_points}</b></div>`).join(""):'<p class="mu">No attempts yet.</p>'}<button class="go" data-a="csv">⬇ Download all results (CSV)</button><h3>Students</h3>${A.s.map(x=>`<div class="rr"><span>${esc(x.name)}<small>${esc(x.email)} · joined ${fD(x.joined)}</small><small>${x.attempts} attempts · best ${x.best==null?"—":x.best+"/400"} · last ${fD(x.last_at)}</small></span><button class="x" data-a="clr" data-u="${x.uid}" data-n="${esc(x.name)}">Clear scores</button></div>`).join("")}<h3>Messages</h3>${A.m.length?A.m.map(x=>`<div class="mg"><span class="bdg">${x.kind}</span><b>${esc(x.name||"No name")}</b> <small>${esc(x.contact||"")} · ${fD(x.created_at)}</small><div>${esc(x.body)}</div></div>`).join(""):'<p class="mu">No messages yet.</p>'}<button class="go alt" data-a="out">Log out</button>`};
+async function csv(){const{data,error}=await sb.rpc("admin_results");if(error||!data)return alert("Could not download.");const H=["name","email","quiz","score","total","points","seconds","taken"],q=x=>'"'+String(x==null?"":x).replace(/"/g,'""')+'"',t=[H.join(",")].concat(data.map(r=>H.map(k=>q(r[k])).join(","))).join("\n"),a=document.createElement("a");a.href=URL.createObjectURL(new Blob(["\ufeff"+t],{type:"text/csv"}));a.download="erudite-results.csv";document.body.appendChild(a);a.click();a.remove()}
+async function after(back){wb=back;await Promise.all([loadHist(),chkAdmin()]);
+if(teacher){if(!isAdmin){await sb.auth.signOut();me=null;teacher=false;mode="in";v="auth";draw();$("#ae").textContent="This account is not a teacher account.";return}await loadAdmin();v="admin";draw();return}
+v="welcome";draw();setTimeout(()=>{if(v=="welcome"){v="home";draw()}},1900)}
+async function boot(){const t0=Date.now();let u=null;if(sb){const{data}=await sb.auth.getSession();u=data&&data.session&&data.session.user}
+await new Promise(r=>setTimeout(r,Math.max(0,1100-(Date.now()-t0))));
+if(u){me=u;await after(1)}else{v="land";draw()}}
+function draw(){const fs=["splash","land","welcome"].includes(v),V={splash,land,welcome,msg,admin,load,auth,home,lb,intro,exam,res,cor};document.body.classList.toggle("fs",fs);$("#app").innerHTML=fs?V[v]():'<div class="bh"><span>ERUDITE</span> ACADEMY</div>'+V[v]()+'<div class="ft">ERUDITE ACADEMY</div>';if(v!="exam")$("#calc").hidden=true;scrollTo(0,0)}
 function tick(){left--;const t=$("#tm");if(t){t.textContent=fmt(left);t.className=left<300?"lo":""}if(left<=0)finish()}
 function start(){A=Array(N).fill(null);i=0;left=1800;v="exam";clearInterval(tmr);tmr=setInterval(tick,1000);draw()}
 function finish(){clearInterval(tmr);v="res";draw();save()}
 async function save(){if(!sb||!me)return;const s=A.filter((a,k)=>a===Q[k].a).length,row={quiz:"moments",score:s,total:N,points:Math.round(s/N*400)};try{const r=await sb.from("results").insert({...row,seconds:1800-left});if(r.error)await sb.from("results").insert(row)}catch(_){}}
 $("#app").onclick=e=>{const b=e.target.closest("button");if(!b||b.disabled)return;const a=b.dataset.a,k=+b.dataset.k;if(a!="sub")armed=0;
+if(a=="login"){teacher=false;mode="in";v="auth";return draw()}
+if(a=="signup"){teacher=false;mode="up";v="auth";return draw()}
+if(a=="teacher"){teacher=true;mode="in";v="auth";return draw()}
+if(a=="land"){teacher=false;v="land";return draw()}
+if(a=="msg"){msgK=b.dataset.k;msgDone=false;v="msg";return draw()}
+if(a=="mback"){msgDone=false;v=me?"home":"land";return draw()}
+if(a=="send")return send();
+if(a=="admin"){loadAdmin().then(()=>{v="admin";draw()});return}
+if(a=="csv")return csv();
+if(a=="clr"){if(confirm("Delete all quiz scores of "+b.dataset.n+"? This cannot be undone.")){sb.rpc("admin_clear_results",{uid:b.dataset.u}).then(()=>loadAdmin()).then(draw)}return}
 if(a=="auth")return doAuth();
 if(a=="mode"){mode=mode=="in"?"up":"in";return draw()}
 if(a=="open"){v="intro";return draw()}
 if(a=="lb"){loadLb().then(()=>{v="lb";draw()});return}
 if(a=="home"){loadHist().then(()=>{v="home";draw()});return}
-if(a=="out"){sb.auth.signOut().then(()=>{me=null;mode="in";v="auth";draw()});return}
+if(a=="out"){sb.auth.signOut().then(()=>{me=null;isAdmin=false;teacher=false;mode="in";v="land";draw()});return}
 if(a=="start")return start();
 if(a=="opt"){A[i]=+b.dataset.j;const n=i;draw();if(n<N-1)setTimeout(()=>{if(v=="exam"&&i==n){i++;draw()}},350);return}
 if(a=="calc"){$("#calc").hidden=!$("#calc").hidden;return}
 if(a=="sub"){const u=A.filter(z=>z===null).length;if(u&&!armed){armed=u;draw();return}return finish()}
 if(a=="pal")i=k;else if(a=="prev")i--;else if(a=="next")i++;else if(a=="cor"){ci=0;v="cor"}else if(a=="res")v="res";else if(a=="cp")ci=k;else if(a=="cprev")ci--;else if(a=="cnext")ci++;
 draw()};
-$("#app").onkeydown=e=>{if(e.key=="Enter"&&e.target.closest(".gate"))doAuth()};
+$("#app").onkeydown=e=>{if(e.key=="Enter"&&v=="auth"&&e.target.closest(".gate"))doAuth()};
 const K=["C","⌫","(",")","7","8","9","÷","4","5","6","×","1","2","3","−","0",".","=","+"];
 $("#calc").innerHTML=`<div id="cd">0</div><div class="ks">${K.map(k=>`<button>${k}</button>`).join("")}</div>`;
 function ev(s){let p=0;
@@ -208,5 +274,5 @@ if(k=="C")ex="";else if(k=="⌫")ex=ex.slice(0,-1);
 else if(k=="="){try{const r=ev(ex.replace(/×/g,"*").replace(/÷/g,"/").replace(/−/g,"-"));ex=isFinite(r)?String(+r.toPrecision(10)):"Error"}catch(_){ex="Error"}}
 else{if(ex=="Error")ex="";ex+=k}
 $("#cd").textContent=ex||"0"};
-draw();if(sb)enter();else{v="auth";draw()}
+draw();boot()
 </script></body></html>
