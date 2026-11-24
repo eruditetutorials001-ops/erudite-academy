@@ -1,0 +1,17 @@
+{
+  "id": "/",
+  "name": "Erudite Academy",
+  "short_name": "Erudite",
+  "description": "Erudite Academy: UTME practice quizzes, results and leaderboard.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fff9ea",
+  "theme_color": "#c81d1d",
+  "icons": [
+    {"src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}

@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#c81d1d">
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" type="image/png" href="/icon-192.png">
+<link rel="apple-touch-icon" href="/icon-192.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Erudite">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <title>Erudite Academy · UTME Physics CBT · Moments, Torque &amp; Equilibrium</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Montserrat:wght@700;800&family=Figtree:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -273,6 +281,7 @@ body.ld #app{min-height:100vh;min-height:100dvh;display:flex;flex-direction:colu
 .ztbar b,.why h2,.mn{background:linear-gradient(90deg,#2b1a00 0%,#9a3d00 38%,#f97316 72%,#ffb703 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;padding-bottom:.08em}
 .ztbar b{flex:0 1 auto;margin-right:auto}.why h2,.mn{display:inline-block}
 .suh h1,.sur b,.lhero .lh b,.lf .lh b,.lbh h1,.hbn h2{background:linear-gradient(90deg,#2b1a00,#6b2c00 60%,#8a3a00);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;padding-bottom:.08em}
+.sp2{display:grid;justify-items:center;gap:8px}.sp2 img{width:92px;height:92px;border-radius:22px;box-shadow:0 10px 26px #c81d1d44}.sp2 b{font:800 19px var(--hd);color:var(--r);margin-top:6px}.sp2 small{color:var(--mu);font-size:12px;margin-bottom:10px}.sp2 i{width:28px;height:28px;border-radius:50%;border:3px solid #ffeaa6;border-top-color:#f5a300;animation:sp .9s linear infinite}
 </style></head>
 <body>
 <div id="app"></div>
@@ -464,10 +473,10 @@ learn=()=>`<h2 class="zttl">Learn</h2><div class="card" style="text-align:center
 pk=t=>{try{return localStorage.getItem("ea_"+t+":"+me.id)||""}catch(_){return""}},
 um=()=>(me&&me.user_metadata)||{},
 CAM='<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>',
-RI={u:'<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/>',m:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>',f:'<path d="M5 21V4M5 4h12l-2 4 2 4H5"/>',o:'<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/>',t:'<path d="M14.7 6.3a4 4 0 0 0-5 5L3 18l3 3 6.7-6.7a4 4 0 0 0 5-5l-2.5 2.5-2.4-.6-.6-2.4z"/>'},
+RI={d:'<path d="M12 3v12M7 10l5 5 5-5M5 21h14"/>',u:'<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/>',m:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>',f:'<path d="M5 21V4M5 4h12l-2 4 2 4H5"/>',o:'<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/>',t:'<path d="M14.7 6.3a4 4 0 0 0-5 5L3 18l3 3 6.7-6.7a4 4 0 0 0 5-5l-2.5 2.5-2.4-.6-.6-2.4z"/>'},
 prow=(a,i,t,c,k)=>`<button class="pl2${c?" "+c:""}" data-a="${a}"${k?` data-k="${k}"`:""}><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${RI[i]}</svg><span>${t}</span>${c=="rd"?"":'<b class="ch">›</b>'}</button>`,
 sw=(k,on)=>`<button class="sw${on?" on":""}" role="switch" aria-checked="${on}" aria-label="Toggle" data-a="ptg" data-q="${k}"></button>`,
-profile=()=>{if(pe)return pform();const m=um(),a=pk("av"),c=pk("cv"),ph=(m.phone||"").trim(),E=me.email||"";return `<div class="me-t"><i>${tic("profile")}</i><b>Me</b></div><div class="cv"${c?` style="background-image:url(${c})"`:""}><button data-a="pimg" data-q="cv">${CAM}${c?"Change cover":"Add cover"}</button></div><div class="av"${a?` style="background-image:url(${a})"`:""}>${a?"":esc(ini())}<button data-a="pimg" data-q="av" aria-label="Change photo">${CAM}</button></div><input type="file" id="pimg" accept="image/*" hidden><h2 class="mn">${esc(nm1())}</h2><p class="pem">${esc(E)}</p><div class="pc"><b>Contact visibility</b><p>Choose what other students see on your profile. Both are private by default. You can still sign in with either.</p><div class="pr"><div><b>Show email on my profile</b><small>${esc(E)}</small></div>${sw("show_email",!!m.show_email)}</div><div class="pr"><div><b>Show phone number on my profile</b><small>${ph?esc(ph):"None on your account"}</small></div>${sw("show_phone",!!m.show_phone&&!!ph)}</div><button class="pv" data-a="pview">See how others view my profile</button></div>${stu()?"":codeBox("Got an access code from Erudite Academy? Enter it to unlock the students-only quizzes.")}${prow("pedit","u","Edit profile")}${isAdmin?prow("admin","t","Tutor board"):""}${prow("msg","m","Contact us","","contact")}${prow("msg","f","Complaint","","complaint")}${prow("out","o","Log out","rd")}`};
+profile=()=>{if(pe)return pform();const m=um(),a=pk("av"),c=pk("cv"),ph=(m.phone||"").trim(),E=me.email||"";return `<div class="me-t"><i>${tic("profile")}</i><b>Me</b></div><div class="cv"${c?` style="background-image:url(${c})"`:""}><button data-a="pimg" data-q="cv">${CAM}${c?"Change cover":"Add cover"}</button></div><div class="av"${a?` style="background-image:url(${a})"`:""}>${a?"":esc(ini())}<button data-a="pimg" data-q="av" aria-label="Change photo">${CAM}</button></div><input type="file" id="pimg" accept="image/*" hidden><h2 class="mn">${esc(nm1())}</h2><p class="pem">${esc(E)}</p><div class="pc"><b>Contact visibility</b><p>Choose what other students see on your profile. Both are private by default. You can still sign in with either.</p><div class="pr"><div><b>Show email on my profile</b><small>${esc(E)}</small></div>${sw("show_email",!!m.show_email)}</div><div class="pr"><div><b>Show phone number on my profile</b><small>${ph?esc(ph):"None on your account"}</small></div>${sw("show_phone",!!m.show_phone&&!!ph)}</div><button class="pv" data-a="pview">See how others view my profile</button></div>${stu()?"":codeBox("Got an access code from Erudite Academy? Enter it to unlock the students-only quizzes.")}${prow("pedit","u","Edit profile")}${isAdmin?prow("admin","t","Tutor board"):""}${prow("msg","m","Contact us","","contact")}${prow("msg","f","Complaint","","complaint")}${INST()}${prow("out","o","Log out","rd")}`};
 let lbq="",lbrows=[],lbErr=false;
 async function loadLb(){try{const{data,error}=await sb.rpc("leaderboard",{q:lbq});lbErr=!!error;lbrows=data||[]}catch(_){lbErr=true;lbrows=[]}}
 const lbIn=n=>String(n||"?").trim().split(/\s+/).filter(w=>/[\p{L}\p{N}]/u.test(w)).map(w=>Array.from(w)[0]||"").slice(0,2).join("").toUpperCase()||"?",
@@ -495,7 +504,7 @@ const WA="https://whatsapp.com/channel/0029VbDTdxCHbFVGOvntCa0b";
 let teacher=false,isAdmin=false,adm=null,msgK="contact",msgDone=false,wb=1;
 const IC={ck:'<path d="M5 12.5l4.5 4.5L19 7.5"/>',tm:'<circle cx="12" cy="13" r="7"/><path d="M12 9.5V13l2.5 1.5M9.5 3h5"/>',bar:'<path d="M6 20V11M12 20V5M18 20v-7"/>'};
 const ico=k=>`<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b87400" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">${IC[k]}</svg>`;
-const splash=()=>'<div class="splash"><div class="spin"><b>E</b></div></div>';
+const splash=()=>'<div class="splash"><div class="sp2"><img src="/icon-192.png" alt=""><b>Erudite Academy</b><small>Practice. Improve. Excel.</small><i></i></div></div>';
 const land=()=>`<header class="lhero"><div class="lw"><div class="lh"><span class="lg">E</span><b>Erudite Academy</b><button class="pill" data-a="login">Log in</button></div><h1>Practise like it’s exam day.</h1><p>Take timed JAMB-style mocks, see every answer explained straight away, and climb the leaderboard.</p><div class="lbt"><button class="wb" data-a="signup">Create free account</button><button class="ob" data-a="teacher">Tutor portal</button></div></div></header><section class="why"><div class="lw"><h2>Why Erudite Academy</h2>${[["ck","Instant corrections","See every answer explained the moment you submit."],["tm","Real exam conditions","Timed mocks that feel like the real paper."],["bar","Live leaderboards","Compare your score with everyone who took the same quiz."]].map(([i,t,d])=>`<div class="wi"><i>${ico(i)}</i><div><b>${t}</b><span>${d}</span></div></div>`).join("")}</div></section><footer class="lf"><div class="lw"><div class="lh"><span class="lg">E</span><b>Erudite Academy</b></div><p>Mock exams, quizzes and corrections for students who want to pass with confidence.</p><div class="lbt"><button class="wb" data-a="msg" data-k="contact">Contact us</button><button class="ob" data-a="msg" data-k="complaint">Complaint</button></div>${WA?`<a class="wa" href="${WA}" target="_blank" rel="noopener">Join our WhatsApp channel</a>`:""}<div class="lbm"><span>© 2026 Erudite Academy</span><button data-a="teacher">Tutor login</button></div></div></footer>`;
 const welcome=()=>{const n=esc(((me.user_metadata&&me.user_metadata.name)||"Student").split(" ")[0]);return `<div class="wel"><small>ERUDITE ACADEMY</small><h1>Welcome${wb?` <em>back, ${n}</em>`:`, <em>${n}</em>`}</h1><p>Let’s get practising.</p></div>`};
 const msg=()=>{const c=msgK=="contact";return `<button class="sm hm" data-a="mback">← Back</button><div class="hero"><div class="chips"><span>${c?"Contact us":"Complaint"}</span></div><h1>${c?"We’d love to hear from you":"Tell us what went wrong"}</h1><p>${c?"Send a message and we will reply.":"We read every complaint."}</p></div>${msgDone?'<div class="card gate"><p class="q">✅ Thank you. Your message has been sent.</p></div>':`<div class="card gate"><input class="tx" id="mn" placeholder="Your name" maxlength="80" value="${me?esc((me.user_metadata&&me.user_metadata.name)||""):""}"><input class="tx" id="mc" placeholder="Phone or email (so we can reply)" maxlength="120"><textarea id="mb" placeholder="Your message" maxlength="1000"></textarea><div id="ae" class="er"></div><button class="go" id="ab" data-a="send">Send</button></div>`}${TWA?`<a class="go alt" style="text-align:center;text-decoration:none;box-sizing:border-box" href="${TWA}" target="_blank" rel="noopener">💬 Chat with us on WhatsApp</a>`:""}`};
@@ -632,6 +641,7 @@ if(a=="qf"){qf=b.dataset.q;draw(1);return}
 if(a=="at"){adT=b.dataset.q;draw(1);return}
 if(a=="qm"){qmenu(b.dataset.q);return}
 if(a=="home"){history.replaceState(null,"",location.pathname+location.search);loadHist().then(()=>{v="home";draw()});return}
+if(a=="inst")return instApp();
 if(a=="out"){sb.auth.signOut().then(()=>{me=null;isAdmin=false;teacher=false;mode="in";v="land";draw()});return}
 if(a=="start")return start();
 if(a=="opt"){A[i]=+b.dataset.j;const n=i;draw();if(n<N-1)setTimeout(()=>{if(v=="exam"&&i==n){i++;draw()}},350);return}
@@ -674,5 +684,15 @@ $("#app").addEventListener("click",e=>{const b=e.target.closest("button");if(v==
 document.addEventListener("visibilitychange",()=>{if(document.hidden)drPut();else tick()});
 window.addEventListener("pagehide",drPut);
 window.addEventListener("beforeunload",e=>{if(v=="maker"&&mkDirty){drPut();e.preventDefault();e.returnValue=""}});
+let dip=null;
+const standalone=()=>matchMedia("(display-mode: standalone)").matches||navigator.standalone===true;
+function INST(){return standalone()?"":prow("inst","d","Install Erudite app")}
+function instApp(){
+ if(dip){dip.prompt();dip.userChoice.finally(()=>{dip=null;if(v=="profile")draw(1)});return}
+ if(/iphone|ipad|ipod/i.test(navigator.userAgent))return toast("Tap the Share button, then Add to Home Screen");
+ toast("Open the browser menu (⋮) and tap Install app or Add to Home screen")}
+window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();dip=e});
+window.addEventListener("appinstalled",()=>{dip=null;if(v=="profile")draw(1)});
+if("serviceWorker" in navigator&&/^https?:/.test(location.protocol))window.addEventListener("load",()=>navigator.serviceWorker.register("/sw.js").catch(()=>{}));
 draw();boot()
 </script></body></html>
