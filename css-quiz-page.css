@@ -1,0 +1,48 @@
+/* Erudite Academy · css-quiz-page.css · quiz detail page and follow gate · keep load order */
+.qd{font-family:Figtree,sans-serif;color:var(--xt);background:var(--xb);min-height:100vh}
+.qdw{max-width:520px;margin:0 auto}
+.qdh{background:linear-gradient(180deg,#2f6df0,#1d4ed8);color:#fff;padding:12px 20px 38px}
+body.nw.xd .qdh{background:linear-gradient(180deg,#0b1530,#05070c)}
+.qdt{display:flex;justify-content:space-between;margin:0 -6px 14px}
+.qdb{width:40px;height:40px;border-radius:50%;border:0;background:#fff;color:#1d5bd8;display:grid;place-items:center;padding:0;box-shadow:0 3px 10px #0003}
+.qdb svg{width:18px;height:18px}
+body.nw.xd .qdb{background:transparent;border:1.5px solid #202a3a;color:#f1f5f9;box-shadow:none}
+.fg{text-align:left}
+.fg h2{font:800 15.5px/1.25 Figtree,sans-serif;margin:0 0 3px;color:#fff}
+.fgs{margin:0 0 16px;font-size:10px;opacity:.9}
+.fg ol{list-style:none;margin:0 0 16px;padding:0;display:grid;gap:13px}
+.fg li{display:flex;gap:12px;align-items:flex-start}
+.fg li i{flex:none;width:24px;height:24px;border-radius:50%;border:1.5px solid #ffffff80;background:#ffffff26;display:grid;place-items:center;font:800 9px Figtree,sans-serif;font-style:normal}
+body.nw.xd .fg li i{border-color:#3a4558;background:#161d29}
+.fg li b{display:block;font:700 10.5px/1.25 Figtree,sans-serif}
+.fg li span{display:block;font-size:9px;line-height:1.3;opacity:.85;margin-top:2px}
+.fgb{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;box-sizing:border-box;height:50px;border:0;border-radius:99px;padding:0 16px;background:linear-gradient(90deg,#12a066,#22c55e);color:#fff;font:800 12px Figtree,sans-serif;text-decoration:none;box-shadow:0 6px 14px #0b6b4455}
+.fgm{display:block;width:100%;background:transparent;border:1.5px solid #ffffff88;border-radius:99px;color:#fff;font:700 10px Figtree,sans-serif;padding:10px;margin-top:8px}
+.fgm[hidden]{display:none}
+.qdh .gate{margin:0}
+.qdx{background:var(--xb);border-radius:22px 22px 0 0;margin-top:-18px;position:relative;padding:22px 18px 40px}
+.qdx h1{font:800 16px/1.25 Figtree,sans-serif;margin:0 0 4px;color:var(--xt)}
+.qdsb{margin:0 0 4px;color:var(--xm);font-size:9.5px}
+.qdcs{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 12px}
+.qdc{display:inline-flex;align-items:center;gap:5px;height:23px;box-sizing:border-box;border-radius:99px;padding:0 11px;font:700 9px Figtree,sans-serif;border:1px solid transparent}
+.qdc.g{background:var(--xgs);color:#0e7c53}
+.qdc.a{background:#fff4d6;color:#8a5a00}
+.qdc.b{background:var(--xs);color:var(--xp)}
+body.nw.xd .qdc.g{color:var(--xg);border-color:#1b6f4d}
+body.nw.xd .qdc.a{background:#2a2108;color:var(--xa)}
+body.nw.xd .qdc.b{border-color:#1d3f8f}
+.qdd{display:flex;align-items:center;gap:6px;color:var(--xm);font:600 9px Figtree,sans-serif;margin:0 0 14px}
+.qdst{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--xl);border-radius:18px;background:#f5f7fb;padding:14px 0}
+body.nw.xd .qdst{background:transparent}
+.qdst div{display:flex;flex-direction:column;align-items:center;gap:2px;border-left:1px solid var(--xl)}
+.qdst div:first-child{border-left:0}
+.qdst i{color:var(--xp);display:block;margin-bottom:6px;font-style:normal}
+.qdst b{font:800 14px Figtree,sans-serif;color:var(--xt)}
+.qdst span{font-size:8.5px;color:var(--xm)}
+.qdsh{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;background:none;border:0;color:var(--xp);font:800 11px Figtree,sans-serif;padding:22px 0}
+.qdtab{text-align:center;color:var(--xp);font:700 11px Figtree,sans-serif;padding-top:10px;border-bottom:1px solid var(--xl)}
+.qdtab::after{content:"";display:block;height:3px;width:60%;margin:10px auto 0;border-radius:3px 3px 0 0;background:var(--xp)}
+.qdab{color:var(--xm);font:500 10.5px/1.6 Figtree,sans-serif;margin:14px 0}
+.qdh3{font:800 11px Figtree,sans-serif;color:var(--xt);margin:14px 0 8px}
+.qdtg{display:flex;flex-wrap:wrap;gap:6px}
+.qdtg span{background:var(--xs);color:var(--xp);border-radius:99px;padding:5px 10px;font:700 9px Figtree,sans-serif}

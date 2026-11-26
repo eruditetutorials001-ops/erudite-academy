@@ -1,0 +1,5 @@
+/* Erudite Academy · js-results.js · saving the score and attempt history */
+async function loadHist(){try{const{data}=await sb.from("results").select("quiz,score,total,points,created_at").order("created_at",{ascending:false}).limit(5);hist=(data||[]).filter(r=>!held((QZ.find(q=>q.id==r.quiz)||{}).hold))}catch(_){hist=[]}}
+let svst=0,svid=0;
+const svq=[],svh=()=>svst==1?'<span class="sv1">Saving your score…</span>':svst==2?'<span class="sv2">✓ Score saved</span>':'',svshow=()=>{const e=$("#sv");if(e)e.innerHTML=svh()};
+async function save(){if(!sb||!me)return;const id=++svid,s=A.filter((a,k)=>a===Q[k].a).length,row={quiz:cur,score:s,total:N,points:Math.round(ptsOf())},secs=TL-left,one=async()=>{try{let r=await sb.from("results").insert({...row,seconds:secs});if(r.error)r=await sb.from("results").insert(row);return!r.error}catch(_){return false}},done=()=>{if(id==svid){svst=2;svshow();if(v=="lb"&&FIN&&!FIN.synced)refLb()}};svst=1;svshow();for(const d of[0,1500,4000,9000]){if(d)await new Promise(r=>setTimeout(r,d));if(await one())return done()}if(id==svid){svst=0;svshow()}svq.push(()=>one().then(ok=>{if(ok)done();return ok}))}
