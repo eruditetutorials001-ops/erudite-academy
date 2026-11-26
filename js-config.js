@@ -1,4 +1,5 @@
 /* Erudite Academy · js-config.js · constants, Supabase client, small helpers and icons */
+const KINDS={quiz:"Quiz",exam:"Exam",challenge:"Challenge"},kindOf=z=>z&&KINDS[z.kind]?z.kind:"exam",kindWord=z=>KINDS[kindOf(z)],CH="linear-gradient(135deg,#2a6df0,#0f3fa8)";
 const $=s=>document.querySelector(s),fmt=s=>{const h=Math.floor(s/3600);return(h?h+":"+String(Math.floor(s%3600/60)).padStart(2,"0"):Math.floor(s/60))+":"+String(s%60).padStart(2,"0")};
 const CI='<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M8 6h8M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15h.01M8 19h.01M12 19h.01M16 19h.01"/></svg>';
 const XI=(d,z)=>`<svg viewBox="0 0 24 24" width="${z||16}" height="${z||16}" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${d}</svg>`;

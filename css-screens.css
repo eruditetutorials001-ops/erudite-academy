@@ -103,3 +103,6 @@ body.ld #app{min-height:100vh;min-height:100dvh;display:flex;flex-direction:colu
 .qbd{margin:10px 0 0;font:600 15px/1.45 var(--bd);white-space:pre-line;word-break:break-word;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.qbd.full{display:block}
 .qim{display:block;width:100%;max-height:220px;object-fit:cover;border-radius:14px;margin-top:10px}
 .qft{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:12px}.qch{background:#fff0c9;color:#8a5a00;border-radius:99px;padding:9px 16px;font:700 12.5px Figtree,sans-serif}.qch.has{background:#dff3e8;color:#16744a}.qan{border:0;background:none;color:#9a6200;font:800 14px Figtree,sans-serif;padding:6px 2px}
+.zch{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}.zch span{margin:0}
+.zkd{display:inline-block;border-radius:99px;padding:2px 10px;font:800 10.5px var(--hd);background:#e3ecff;color:#1f4fbf}.zkd.quiz{background:#dff5ea;color:#11724a}.zkd.challenge{background:#1d63ed;color:#fff}
+.ztg{display:inline-block;border-radius:99px;padding:2px 9px;font:600 10.5px var(--hd);background:#f3ece0;color:#5c4a3a}
