@@ -1,4 +1,5 @@
 /* Erudite Academy · js-app.js · router (draw), click and key handlers, boot */
+let lbFrom="";/* where the leaderboard was opened from: "res" = Results screen, so back returns there */
 async function boot(){const t0=Date.now();await loadList();pend=qid();let u=null;if(sb){const{data}=await sb.auth.getSession();u=data&&data.session&&data.session.user}
 await new Promise(r=>setTimeout(r,Math.max(0,1100-(Date.now()-t0))));
 if(EXP&&!u){teacher=false;mode="in";v="auth";draw();fpOpen("⏱ This reset link has expired or was already used. Enter your email to get a new one.")}else if(REC&&u){me=u;v="newpw";draw()}else if(u){me=u;await after(1)}else if(pend){teacher=false;mode="in";v="auth";draw()}else{v="land";draw()}
@@ -48,7 +49,8 @@ if(a=="setpw")return setpw();
 if(a=="mode"){mode=mode=="in"?"up":"in";return draw()}
 if(a=="open")return openQ(b.dataset.q);
 if(a=="share"||a=="copy"){share(a,b.dataset.q);return}if(a=="rshare"){rsltShare();return}
-if(a=="lb"||a=="lbq"){if(a=="lbq")lbq=b.dataset.q;else if(v=="intro"||v=="res")lbq=cur;return goLb(a=="lbq")}if(a=="retake")return openQ(lbq);if(a=="lbsh"){lbsh=!lbsh;if(!lbsh)lbs="";draw(1);if(lbsh)setTimeout(()=>{const e=$("#lbsi");if(e)e.focus()},50);return}if(a=="mypos"){const e=$("#me-pod")||$("#me-row");if(e){e.scrollIntoView({behavior:"smooth",block:"center"});e.classList.add("fl2");setTimeout(()=>e.classList.remove("fl2"),1500)}else toast("You are not on this leaderboard yet");return}
+if(a=="lb"||a=="lbq"){lbFrom=a=="lb"?(v=="res"?"res":""):(v=="lb"?lbFrom:"");if(a=="lbq")lbq=b.dataset.q;else if(v=="intro"||v=="res")lbq=cur;return goLb(a=="lbq")}if(a=="retake")return openQ(lbq);if(a=="lbsh"){lbsh=!lbsh;if(!lbsh)lbs="";draw(1);if(lbsh)setTimeout(()=>{const e=$("#lbsi");if(e)e.focus()},50);return}if(a=="mypos"){const e=$("#me-pod")||$("#me-row");if(e){e.scrollIntoView({behavior:"smooth",block:"center"});e.classList.add("fl2");setTimeout(()=>e.classList.remove("fl2"),1500)}else toast("You are not on this leaderboard yet");return}
+if(a=="tab0"&&v=="lb"&&lbFrom=="res"){lbFrom="";v="res";return draw()}
 if(a=="tab"||a=="tab0"){const w=a=="tab0"?lt||"home":b.dataset.q;history.replaceState(null,"",location.pathname+location.search);(w=="home"?loadHist():Promise.resolve()).then(()=>{v=w;draw()});return}
 if(a=="qf"){qf=b.dataset.q;draw(1);return}
 if(a=="at"){adT=b.dataset.q;draw(1);return}
@@ -76,7 +78,7 @@ else{if(ex=="Error")ex="";ex+=k}
 $("#cd").textContent=ex||"0"};
 window.addEventListener("hashchange",()=>{const id=qid();if(id&&me&&(v=="home"||v=="intro"))openQ(id)});
 const act=a=>$("#app").onclick({target:{closest:()=>({dataset:{a}})}}),keep=()=>history.pushState(null,"",location.href);
-window.addEventListener("popstate",()=>{const fp=$("#fp");if(fp){fp.remove();return keep()}const x={auth:"land",msg:"mback",intro:"tab0",res:"tab0",cor:"res",lb:"tab0",admin:"tab0",maker:"admin",quiz:"home",learn:"home",profile:"home"};
+window.addEventListener("popstate",()=>{const fp=$("#fp");if(fp){fp.remove();return keep()}const x={auth:"land",msg:"mback",intro:"tab0",res:"tab0",cor:"res",lb:lbFrom=="res"?"res":"tab0",admin:"tab0",maker:"admin",quiz:"home",learn:"home",profile:"home"};
 if(v=="exam"){if(!confirm("Leave the exam? Your answers will be lost."))return keep();clearInterval(tmr);keep();return act("home")}
 if(x[v]){if(v=="maker"&&mkDirty){if(!confirm(LV))return keep();drPut();mkDirty=0}keep();return act(x[v])}
 if(v=="home"||v=="land")return history.back();
