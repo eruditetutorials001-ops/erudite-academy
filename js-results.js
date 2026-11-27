@@ -30,6 +30,6 @@ return `<div class="rsx"><div class="rsx-top"><button class="rsx-back" data-a="h
 <div class="rsx-inf"><b class="rsx-sc">${M.pt}/${M.T}</b><span class="rsx-sl">${M.mk?"marks scored":"questions correct"}</span><div class="rsx-ch m">${esc(kindWord(z).toUpperCase())} MODE</div><div class="rsx-ch"><i class="${b[1]}"></i>${b[0]}</div><div class="rsx-r2"><div class="rsx-ch">${rsltOrd(rsltAtt())} Attempt</div>${t?`<div class="rsx-ch">${ic('<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',15)}${t}</div>`:""}</div></div></div>
 <div class="rsx-stats">${st(c,"Correct","g")}${st(w,"Wrong","r")}${st(s,"Skipped","a")}</div>
 ${S.length?`<div class="rsx-sb"><div class="rsx-sbt">Score by subject</div>${S.map(rsltSj).join("")}</div>`:""}
-<div class="rsx-sv" id="sv">${svh()}</div>
+<div class="rsx-sv" id="sv">${svh()}</div>${rsltAtt()>1?'<div class="rsx-sv" style="margin-top:2px">Only your first attempt counts on the leaderboard.</div>':""}
 <div class="rsx-bot"><div class="rsx-acts"><button data-a="lb">${ic('<path d="M8 4h8v5a4 4 0 0 1-8 0z"/><path d="M8 5H5v1a3 3 0 0 0 3 3M16 5h3v1a3 3 0 0 1-3 3M12 13v4M9 20h6M10 17h4"/>')}<span>Leaderboard</span></button><button class="ok" data-a="cor">${ic('<rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8.5 12.2l2.4 2.4 4.6-5"/>')}<span>Corrections</span></button></div>
-<button class="rsx-retry" data-a="start">Retry Same Mode</button><div class="rsx-r3"><button data-a="rshare">Share My Result</button></div></div></div>`}
+${rtOk(z)?'<button class="rsx-retry" data-a="start">Retry Same Mode</button>':""}<div class="rsx-r3"><button data-a="rshare">Share My Result</button></div></div></div>`}

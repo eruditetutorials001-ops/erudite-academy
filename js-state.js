@@ -5,4 +5,4 @@ let ED=null,mkDirty=0,dt=0,endAt=0;
 let lt="home",qf="all",qsr="";
 let att=[],lbL=0,lbs="",lbsh=0,FIN=null,ltx="Loading quiz";
 let teacher=false,isAdmin=false,adm=null,msgK="contact",msgDone=false,wb=1;
-let cur="moments",pend=null;
+let cur="moments",pend=null,trdQ={};
