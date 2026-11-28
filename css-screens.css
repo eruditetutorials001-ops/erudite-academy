@@ -185,4 +185,11 @@ body.ld{background:#e9eff8}
 .su .cuo{display:grid;place-items:center;width:68px;height:68px;margin:0 auto 18px;border-radius:50%;background:#dcf5e8;color:#16a368;box-shadow:0 0 0 8px #16a36814}
 .su .cud h2{margin:0 0 6px;font:700 25px/1.2 var(--lpf);letter-spacing:-.02em;color:#06133f}
 .su .cud p{margin:0 0 8px;font:500 15px/1.5 Figtree,Montserrat,sans-serif;color:#4a5a84}
-.su .cuw{display:flex;align-items:center;justify-content:center;gap:9px;min-height:52px;margin:14px 0 0;border-radius:14px;border:1.5px solid #bfe6d2;background:linear-gradient(180deg,#f4fcf8,#dcf5e8);color:#0b7a4c;font:600 14.5px var(--lpf);text-decoration:none;box-shadow:0 6px 16px #16a36814}
+.su .cuh{margin:22px 2px 8px;font:700 13.5px Figtree,Montserrat,sans-serif;color:#2c3d6e}
+.su .cus{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:20px;border:1px solid #dfe7f3;background:linear-gradient(180deg,#fff,#f6f9fd);box-shadow:0 10px 26px #0d3fb812;text-decoration:none;color:#06133f}
+.su .cua{flex:none;width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:#dcf5e8;color:#16a368}
+.su .cus span{flex:1;min-width:0}
+.su .cus b{display:block;font:600 15.5px/1.25 var(--lpf);color:#06133f}
+.su .cus small{display:block;margin-top:2px;font:500 13px/1.4 Figtree,Montserrat,sans-serif;color:#4a5a84}
+.su .cus em{flex:none;font-style:normal;padding:9px 15px;border-radius:99px;background:#0e8556;color:#fff;font:600 13.5px var(--lpf);box-shadow:0 6px 14px #0e855640}
+.su .cun{margin:8px 2px 0;font:500 12.5px/1.45 Figtree,Montserrat,sans-serif;color:#4a5a84}
