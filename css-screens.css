@@ -107,11 +107,12 @@ body.ld #app{min-height:100vh;min-height:100dvh;display:flex;flex-direction:colu
 .zkd{display:inline-block;border-radius:99px;padding:2px 10px;font:800 10.5px var(--hd);background:#e3ecff;color:#1f4fbf}.zkd.quiz{background:#dff5ea;color:#11724a}.zkd.challenge{background:#1d63ed;color:#fff}
 .ztg{display:inline-block;border-radius:99px;padding:2px 9px;font:600 10.5px var(--hd);background:#f3ece0;color:#5c4a3a}
 /* landing page (v=="land"): soft white to pale blue-grey, navy text, blue/green accents, navy footer. Classes start with lp- */
-/* Inktrap font: put inktrap-bold.ttf and inktrap-semibold.ttf (or .otf) next to index.html on GitHub; lowercase names. Used for headings, buttons and card titles only */
+/* Inktrap font: put inktrap-bold, inktrap-semibold and inktrap-extrabold (.ttf or .otf) next to index.html on GitHub; lowercase names. Used for headings, buttons and card titles only */
 @font-face{font-family:Inktrap;font-weight:700;font-style:normal;font-display:swap;src:url("/inktrap-bold.ttf") format("truetype"),url("/inktrap-bold.otf") format("opentype")}
+@font-face{font-family:Inktrap;font-weight:800;font-style:normal;font-display:swap;src:url("/inktrap-extrabold.ttf") format("truetype"),url("/inktrap-extrabold.otf") format("opentype")}
 @font-face{font-family:Inktrap;font-weight:600;font-style:normal;font-display:swap;src:url("/inktrap-semibold.ttf") format("truetype"),url("/inktrap-semibold.otf") format("opentype")}
 body.ld{background:#e9eff8}
-.lp{--lpf:Inktrap,Figtree,Montserrat,system-ui,sans-serif;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;background:radial-gradient(120% 50% at 100% 0,#dde8fb 0,#dde8fb00 62%),linear-gradient(180deg,#fff 0,#f1f5fb 48%,#e3eaf5 100%);color:#0a1a45;font-family:Figtree,Montserrat,system-ui,sans-serif}
+.lp{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;background:radial-gradient(120% 50% at 100% 0,#dde8fb 0,#dde8fb00 62%),linear-gradient(180deg,#fff 0,#f1f5fb 48%,#e3eaf5 100%);color:#0a1a45;font-family:Figtree,Montserrat,system-ui,sans-serif}
 .lp-w{max-width:520px;margin:0 auto;padding:0 20px}
 .lp-top{padding:16px 0 0}
 .lp-br{display:flex;align-items:center;gap:10px}.lp-br b{font:700 17px var(--lpf);letter-spacing:-.01em}
@@ -141,3 +142,38 @@ body.ld{background:#e9eff8}
 .lp-wa{display:flex;align-items:center;justify-content:center;margin-top:12px;min-height:48px;border-radius:14px;border:1px solid #1e8a5799;background:#12a06626;color:#8ff0c2;font:600 14px var(--lpf);text-decoration:none}
 .lp-bm{display:flex;justify-content:space-between;align-items:center;margin-top:22px;padding-top:16px;border-top:1px solid #ffffff22;font:500 13px Figtree,Montserrat,sans-serif;color:#97a8d3}
 .lp-bm button{background:none;border:0;padding:6px 0;color:#d4def5;font:600 13px Figtree,Montserrat,sans-serif;text-decoration:underline}
+
+/* log in, sign-up, tutor log in, reset password, new password and welcome: same look as the landing page */
+:root{--lpf:Inktrap,Figtree,Montserrat,system-ui,sans-serif}
+.su,.wel{background:radial-gradient(120% 50% at 100% 0,#dde8fb 0,#dde8fb00 62%),linear-gradient(180deg,#fff 0,#f1f5fb 48%,#e3eaf5 100%);color:#0a1a45}
+.su .suh{background:none;color:#06133f;padding:18px 0 14px;overflow:visible}
+.su .suh:before,.su .suh:after{display:none}
+.su .sbk{width:44px;height:44px;border-radius:13px;border:1.5px solid #cfdcf3;background:linear-gradient(180deg,#fff,#f4f7fc);color:#0a1a45;font:600 20px var(--bd);box-shadow:0 6px 16px #0d3fb814}
+.su .slg{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,#3b82f6,#1d4ed8);color:#fff;font:700 20px var(--lpf);box-shadow:0 4px 10px #1d4ed844}
+.su .sur b{font:700 17px var(--lpf);letter-spacing:-.01em;color:#06133f}
+.su .suh h1{font:700 clamp(27px,8.4vw,34px)/1.12 var(--lpf);letter-spacing:-.02em;margin:30px 0 10px;color:#06133f}
+.su .suh p{font:500 15px/1.5 Figtree,Montserrat,sans-serif;color:#3d4d78}.su .suh p b{color:#06133f}
+.su .sus{margin-top:0;background:none;border-radius:0;padding:10px 0 34px}
+.su .suc{border:1px solid #dfe7f3;border-radius:22px;padding:2px 16px 18px;background:linear-gradient(180deg,#fff,#f6f9fd);box-shadow:0 10px 26px #0d3fb812}
+.su .sl{text-transform:none;letter-spacing:0;font:700 13.5px Figtree,Montserrat,sans-serif;color:#2c3d6e;margin:18px 0 8px}
+.su .sf{padding:14px 16px;border:1.5px solid #cfdcf3;border-radius:14px;font:500 16px Figtree,Montserrat,sans-serif;background:#fff;color:#06133f}
+.su .sf.cd{font-weight:700}
+.su .sf::placeholder{color:#8a97b8}
+.su .sf:focus{outline:0;border-color:#2563eb;box-shadow:0 0 0 4px #2563eb26}
+.su .sshow{color:#1d4ed8;font:800 11px Figtree,Montserrat,sans-serif;letter-spacing:.06em}
+.su .fgt{color:#1d4ed8;font:700 13.5px Figtree,Montserrat,sans-serif}
+.su .acd summary{color:#1d4ed8;font:700 13.5px Figtree,Montserrat,sans-serif}
+.su .suf{font:500 14px Figtree,Montserrat,sans-serif;color:#4a5a84}.su .suf button{color:#1d4ed8;font:700 14px Figtree,Montserrat,sans-serif}
+.su .er{font:600 13px Figtree,Montserrat,sans-serif}
+.su .go{display:flex;align-items:center;justify-content:center;min-height:54px;margin:16px 0 10px;padding:0 12px;border:0;border-radius:14px;color:#fff;background:linear-gradient(180deg,#2f6df0,#1d4ed8);font:600 15px var(--lpf);box-shadow:0 8px 18px #1d4ed84d}
+#fp .fpc{background:#fff;border-radius:22px;padding:22px;width:100%;max-width:400px;box-shadow:0 20px 50px #06133f55}
+#fp .fph{display:block;font:700 18px var(--lpf);letter-spacing:-.01em;color:#06133f}
+#fp .fpp{margin:8px 0 16px;font:500 13.5px/1.5 Figtree,Montserrat,sans-serif;color:#4a5a84}
+#fp .fpi{width:100%;padding:14px 16px;margin-bottom:6px;border:1.5px solid #cfdcf3;border-radius:14px;font:500 16px Figtree,Montserrat,sans-serif;color:#06133f;background:#fff}
+#fp .fpi:focus{outline:0;border-color:#2563eb;box-shadow:0 0 0 4px #2563eb26}
+#fp .go{min-height:50px;margin:10px 0 0;border:0;border-radius:14px;color:#fff;background:linear-gradient(180deg,#2f6df0,#1d4ed8);font:600 15px var(--lpf);box-shadow:0 8px 18px #1d4ed84d}
+#fp .go.alt{background:#fff;color:#2c3d6e;border:1.5px solid #cfdcf3;box-shadow:none}
+.wel .lp-lg{width:64px;height:64px;border-radius:19px;font-size:34px;margin:0 auto 24px;box-shadow:0 10px 22px #1d4ed84d}
+.wel h1{font:800 clamp(27px,8vw,36px)/1.15 var(--lpf);letter-spacing:-.02em;margin:0 0 12px;background:none;color:#06133f;-webkit-text-fill-color:#06133f}
+.wel h1 em{color:#1d4ed8;-webkit-text-fill-color:#1d4ed8}
+.wel p{font:500 16px Figtree,Montserrat,sans-serif;color:#4a5a84;margin:0}
