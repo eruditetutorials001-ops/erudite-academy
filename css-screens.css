@@ -230,16 +230,20 @@ body.tb .rr small{margin-top:2px;font-size:12px;color:#4a5a84}
 body.tb .rr b{font:700 16px var(--lpf);color:#1d4ed8}
 .hh{margin:22px 2px 10px;font:700 19px/1.2 var(--lpf);letter-spacing:-.01em;color:#06133f}
 /* home: banner */
-.hbn{margin:2px 0 14px;padding:20px 18px 18px;border:1px solid #ffffff2e;border-radius:24px;color:#fff;background:radial-gradient(70% 90% at 100% 0,#3b82f66b,#3b82f600 70%),linear-gradient(135deg,#1d4ed8,#0a2166);box-shadow:0 18px 36px #06133f40}
-.hbn:before{width:230px;height:230px;right:-80px;top:-80px;border:1px solid #ffffff2e;pointer-events:none}
-.hbn:after{content:"";position:absolute;width:170px;height:170px;left:-70px;bottom:-80px;border-radius:50%;background:radial-gradient(#16a36866,#16a36800 70%);pointer-events:none}
+.hbn{margin:2px 0 12px;padding:15px 16px 14px;border:1px solid #ffffff3d;border-radius:24px;color:#fff;background:linear-gradient(155deg,#2250e6 0,#1238c8 46%,#0a2386 100%);box-shadow:0 20px 38px #0a238070,inset 0 1px 0 #ffffff66,inset 0 -22px 34px #06133f4d}
+.hbn:before{content:"";position:absolute;width:250px;height:250px;right:-100px;top:-70px;border:0;border-radius:50%;background:linear-gradient(145deg,#7a9bff52,#4a72f524 60%,#4a72f500);pointer-events:none}
+.hbn:after{content:"";position:absolute;left:0;right:0;top:0;height:56%;border-radius:24px 24px 0 0;background:linear-gradient(180deg,#ffffff33 0,#ffffff12 46%,#ffffff00 100%);pointer-events:none}
 .hbn>*{position:relative;z-index:1}
-.hbn small{font:700 13px var(--bd);color:#bcd0ff}
-.hbn h2{margin:0 0 6px;font:700 clamp(23px,7vw,28px)/1.15 var(--lpf);letter-spacing:-.02em;color:#fff}
+.hbn .hbl{position:absolute;inset:0;z-index:0;border-radius:inherit;pointer-events:none;background:repeating-linear-gradient(45deg,#ffffff00 0 38px,#ffffff29 38px 40px,#ffffff00 40px 62px,#ffffff14 62px 63px);-webkit-mask-image:linear-gradient(225deg,#000 0,#000 28%,#0000 78%);mask-image:linear-gradient(225deg,#000 0,#000 28%,#0000 78%)}
+.hbn small{display:block;margin:0 0 7px;font:700 10px var(--bd);letter-spacing:.17em;text-transform:uppercase;color:#bcd0ff}
+.hbn h2{margin:0 0 11px;font:800 clamp(19px,5.7vw,23px)/1.22 var(--lpf);letter-spacing:-.02em;color:#fff}
+.hbn h2 em{font-style:normal;color:#b4c8ff!important;-webkit-text-fill-color:#b4c8ff!important}
+.hbg{display:inline-flex;align-items:center;gap:8px;max-width:100%;min-height:34px;margin:0 0 11px;padding:0 13px;border:1px solid #ffffff59;border-radius:99px;background:#ffffff1f;color:#fff;font:700 12px var(--lpf);letter-spacing:.04em;box-shadow:inset 0 1px 0 #ffffff40}
+.hbg svg{flex:none;width:14px;height:14px}
 .hbn p{max-width:320px;margin:0 0 16px;font:500 14px/1.5 var(--bd);color:#c9d7fb}
-.hbr{display:grid;gap:10px}
-.hbc{min-height:50px;padding:0 16px;border:0;border-radius:14px;background:#fff;color:#06133f;font:600 15px var(--lpf);box-shadow:0 8px 18px #06133f40}
-.hbw{display:flex;align-items:center;justify-content:center;min-height:48px;padding:0 16px;border:1px solid #1e8a5799;border-radius:14px;background:#12a06633;color:#8ff0c2;font:600 14px var(--lpf);text-decoration:none}
+.hbr{display:grid;gap:8px}
+.hbc{min-height:42px;padding:0 16px;border:0;border-radius:12px;background:#fff;color:#06133f;font:600 14px var(--lpf);box-shadow:0 8px 18px #06133f40}
+.hbw{display:flex;align-items:center;justify-content:center;min-height:38px;padding:0 16px;border:1px solid #1e8a5799;border-radius:12px;background:#12a06633;color:#8ff0c2;font:600 13px var(--lpf);text-decoration:none}
 /* home: question box */
 .hcm{margin:0 0 18px;padding:14px;border:1px solid #dfe7f3;border-radius:22px;background:linear-gradient(180deg,#fff,#f6f9fd);box-shadow:0 10px 26px #0d3fb812}
 .hcm textarea{padding:13px 14px;border:1.5px solid transparent;border-radius:14px;background:#eef3fc;color:#06133f;font:500 15px/1.4 var(--bd)}
@@ -280,3 +284,6 @@ body.tb .zfc .on{border-color:#1d4ed8;background:linear-gradient(180deg,#2f6df0,
 .lrn b{display:block;font:700 18px var(--lpf);color:#06133f}
 .lrn p{margin:8px 0 0;font:500 14px/1.5 var(--bd)}
 @media (max-width:350px){body.tb .ztp svg{display:none}body.tb .ztp{padding:5px 8px;letter-spacing:.05em}body.tb .ztr b{font-size:15px}}
+/* tab screens: no brown or gold gradient text; navy name on the light bar, white headline on the blue banner, both in Inktrap */
+body.tb .ztbar .ztr b{background:none!important;-webkit-background-clip:border-box!important;background-clip:border-box!important;color:#06133f!important;-webkit-text-fill-color:#06133f!important;font-family:var(--lpf)!important;font-weight:700}
+body.tb .hbn h2{background:none!important;-webkit-background-clip:border-box!important;background-clip:border-box!important;color:#fff!important;-webkit-text-fill-color:#fff!important;font-family:var(--lpf)!important;font-weight:800;text-shadow:none}
